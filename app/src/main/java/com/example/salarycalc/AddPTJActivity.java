@@ -17,7 +17,7 @@ public class AddPTJActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_ptj);
 
-        findViews();
+        //findViews();
     }
 
     private void findViews() {
