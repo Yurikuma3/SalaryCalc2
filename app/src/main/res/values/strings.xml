@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SalaryCalc</string>
+    <string name="button_add">バイト先を追加</string>
+    <string name="text_place">バイト先</string>
+    <string name="text_salary">時給</string>
+    <string name="text_clear">完了</string>
+    <string-array name="ingredients_quantity">
+        <item>"生協"</item>
+        <item>"スーパー"</item>
+        <item>"ペットショップ"</item>
+    </string-array>
+</resources>
