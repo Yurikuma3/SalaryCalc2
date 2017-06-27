@@ -5,8 +5,13 @@
     <string name="text_salary">時給</string>
     <string name="text_clear">完了</string>
     <string-array name="ingredients_quantity">
-        <item>"生協"</item>
-        <item>"スーパー"</item>
-        <item>"ペットショップ"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+        <item>"3"</item>
+        <item>"4"</item>
+        <item>"5"</item>
+        <item>"6"</item>
+        <item>"7"</item>
+        <item>"8"</item>
     </string-array>
 </resources>
