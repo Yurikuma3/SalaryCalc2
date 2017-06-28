@@ -33,14 +33,14 @@ public class AddPTJActivity extends AppCompatActivity {
         ContentValues contentValues = new ContentValues();
         contentValues.put("ptj_name", jobname);
         contentValues.put("salary", salary);
-        long id = db.insert("ptj", jobname, contentValues); // 登録したデータのIDを取得
+        //long id = db.insert("ptj", jobname, contentValues); // 登録したデータのIDを取得
 
         //データを表示する
         setContentView(R.layout.show_database);
         Intent dbIntent = new Intent(AddPTJActivity.this,ShowDataBase.class);
         startActivity(dbIntent);
     }
-
+    /*
     private void findViews() {
         Intent intent = getIntent();
         //String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
@@ -49,9 +49,10 @@ public class AddPTJActivity extends AppCompatActivity {
         textView.setTextSize(40);
         textView.setText(message);
         */
-
+/*
         ViewGroup layout = (ViewGroup) findViewById(R.id.activity_add_ptj);
         layout.addView(textView);
     }
+    */
 
 }

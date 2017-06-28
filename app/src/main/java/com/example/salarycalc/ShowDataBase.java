@@ -21,8 +21,7 @@ public class ShowDataBase extends Activity {
         SQLiteDatabase db = helper.getReadableDatabase();
 
         // queryメソッドの実行例
-        Cursor c = db.query("ptj", new String[] { "ptj_name", "salary" }, null,
-                null, null, null, null);
+        Cursor c = db.query("ptj", new String[] { "ptj_name", "salary" }, null,null, null, null, null);
 
         boolean mov = c.moveToFirst();
         while (mov) {
