@@ -9,69 +9,129 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="89dp">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/txt_jobname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/txtJob"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtJob"
+        app:layout_constraintVertical_bias="0.56"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <EditText
+        android:id="@+id/txt_salary"
         android:layout_width="0dp"
-        android:layout_height="203dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="16dp"
-        tools:layout_editor_absoluteX="34dp">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSalary"
+        app:layout_constraintTop_toTopOf="@+id/txtSalary"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/txt_jobname"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/txt_jobname" />
 
-        <TextView
-            android:id="@+id/txtJob"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/text_place"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="31dp" />
+    <TextView
+        android:id="@+id/txtSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="91dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="92dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:text="@string/text_salary"
+        app:layout_constraintBottom_toTopOf="@+id/button_entry"
+        app:layout_constraintRight_toRightOf="@+id/txtJob"
+        app:layout_constraintTop_toTopOf="@+id/txtJob"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
-        <EditText
-            android:id="@+id/txt_jobname"
-            android:layout_width="515dp"
-            android:layout_height="42dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="113dp"
-            tools:layout_editor_absoluteY="14dp" />
+    <Button
+        android:id="@+id/button_entry"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:onClick="dataInput"
+        android:text="@string/text_clear"
+        tools:ignore="MissingConstraints"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="267dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
 
-        <TextView
-            android:id="@+id/txtSalary"
-            android:layout_width="match_parent"
-            android:layout_height="22dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:text="@string/text_salary"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="112dp" />
+    <TextView
+        android:id="@+id/txtJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="62dp"
+        android:layout_weight="1"
+        android:text="@string/text_place"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
-        <EditText
-            android:id="@+id/txt_salary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number"
-            tools:layout_editor_absoluteX="128dp"
-            tools:layout_editor_absoluteY="76dp" />
+    <Button
+        android:id="@+id/btCheck"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:onClick="showData"
+        android:text="現在の登録内容を確認する"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_entry"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
 
-        <Button
-            android:id="@+id/button_entry"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_weight="1"
-            android:onClick="showData"
-            android:text="@string/text_clear"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="219dp" />
+    <Button
+        android:id="@+id/btTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="トップへ"
+        android:onClick="toTop"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="円"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="11dp"
+        app:layout_constraintRight_toRightOf="@+id/txt_salary"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_salary"
+        tools:layout_constraintBaseline_creator="1"
+        android:layout_marginRight="11dp" />
 
 
 </android.support.constraint.ConstraintLayout>
